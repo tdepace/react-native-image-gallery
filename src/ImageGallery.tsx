@@ -166,6 +166,8 @@ const ImageGallery = (props: IProps & typeof defaultProps) => {
             renderItem={renderItem}
             scrollEnabled={!isDragging}
             showsHorizontalScrollIndicator={false}
+            initialNumToRender={10}
+
           />
         </SwipeContainer>
         {hideThumbs ? null : (
@@ -181,6 +183,8 @@ const ImageGallery = (props: IProps & typeof defaultProps) => {
             renderItem={renderThumb}
             showsHorizontalScrollIndicator={false}
             style={[styles.bottomFlatlist, { bottom: thumbSize }]}
+            initialNumToRender={10}
+
           />
         )}
         {renderHeaderComponent ? (
