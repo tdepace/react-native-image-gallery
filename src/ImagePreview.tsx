@@ -7,6 +7,7 @@ import {
   View,
 } from 'react-native';
 import { ImagePreviewProps } from './types';
+import FastImage from 'react-native-fast-image'
 
 const { height, width } = Dimensions.get('window');
 
@@ -24,7 +25,7 @@ const ImagePreview = ({
           {renderCustomImage ? (
             renderCustomImage(item, index, isSelected)
           ) : (
-            <Image
+            <FastImage
               resizeMode={resizeMode}
               source={{ uri: item.url }}
               style={styles.image}

@@ -11,6 +11,8 @@ import {
 import { ImageObject, IProps, RenderImageProps } from './types';
 import ImagePreview from './ImagePreview';
 import SwipeContainer from './SwipeContainer';
+import FastImage from 'react-native-fast-image'
+
 
 const { height: deviceHeight, width: deviceWidth } = Dimensions.get('window');
 
@@ -95,7 +97,7 @@ const ImageGallery = (props: IProps & typeof defaultProps) => {
         {renderCustomThumb ? (
           renderCustomThumb(item, index, activeIndex === index)
         ) : (
-          <Image
+          <FastImage
             resizeMode={thumbResizeMode}
             style={
               activeIndex === index
