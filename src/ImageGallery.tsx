@@ -228,7 +228,7 @@ const styles = StyleSheet.create({
     borderWidth: 3,
   },
   thumb: {
-    borderRadius: 12,
+    borderRadius: 0,
     marginRight: 10,
   },
   thumbnailListContainer: {
